@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BactDetect — Vacteria (iGEM)</title>
+  <meta name="description" content="BactDetect — Optimización de Saccharomyces cerevisiae para biocombustibles | Equipo Vacteria">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#ffd166;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;line-height:1.5;background:linear-gradient(180deg,#071029 0%, #0b1630 100%);color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    header{padding:18px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.03);backdrop-filter: blur(4px)}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#0ea5a1,#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav ul{list-style:none;display:flex;gap:14px;margin:0;padding:0}
+    nav li{font-weight:600}
+    main{padding:28px;max-width:1100px;margin:20px auto}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:center}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.02)}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{color:var(--muted);margin-top:8px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#061322;font-weight:700}
+    .modules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+    .module{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
+    section{margin-top:20px}
+    .two-col{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    .mapimg{width:100%;height:220px;background:var(--glass);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+    .member{padding:10px;border-radius:8px;background:#071426}
+    footer{padding:18px;text-align:center;color:var(--muted);margin-top:30px}
+    /* responsive */
+    @media(max-width:880px){.hero,.two-col{grid-template-columns:1fr}.brand .hide-sm{display:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">BD</div>
+      <div>
+        <div style="font-weight:800">BactDetect — Vacteria</div>
+        <div style="font-size:12px;color:var(--muted)">Levaduras modificadas para biocombustible sostenible</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#diseno">Diseño genético</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#etica">Ética</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="inicio" class="hero card">
+      <div>
+        <h1>BactDetect — Optimización de <em>Saccharomyces cerevisiae</em> para biocombustibles</h1>
+        <p class="lead">Proyecto iGEM — Equipo Vacteria. Convertimos residuos azucarados locales en energía renovable mediante ingeniería metabólica en levaduras. Prototipo orientado a pequeñas plantas piloto y cooperativas.</p>
+        <p style="margin-top:14px"><a class="btn" href="#diseno">Ver diseño genético</a> <a style="margin-left:10px;color:var(--muted)" href="#etica">Impacto ético</a></p>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:18px 0">
+
+        <strong>Instrucciones del trabajo final — Unidad 4</strong>
+        <ol style="color:var(--muted)">
+          <li>a) Área de estudio y planteamiento del problema</li>
+          <li>b) Diseño genético y ensamblaje (Mostrar mapa desde Benchling)</li>
+          <li>c) Posibles resultados esperados</li>
+          <li>d) Impacto ético y social</li>
+          <li>e) Página web con toda la información</li>
+        </ol>
+        <p style="color:var(--muted);font-size:13px">Presentación: Jueves 02/10/2025 — Cada apartado vale 20 puntos.</p>
+      </div>
+
+      <aside class="card" style="height:100%">
+        <h3 style="margin-top:0">Mapa plasmídico (Benchling)</h3>
+        <div class="mapimg">[Imagen del mapa plasmídico — sustituir aquí]</div>
+        <p style="margin-top:10px;color:var(--muted)">👉 <a href="#" id="benchling-link">Ver mapa en Benchling</a> (pega el link real en el código)</p>
+      </aside>
+    </section>
+
+    <section id="diseno" class="card">
+      <h2>Diseño genético — visión general</h2>
+      <p style="color:var(--muted)">Ruta A (Etanol): potenciar flujo glucolítico → piruvato → etanol. Ruta B (Biodiésel): redirigir acetil-CoA hacia síntesis de ácidos grasos y ésteres.</p>
+
+      <div class="modules">
+        <div class="module">
+          <strong>Módulo 1 — PDC1 / ADH1</strong>
+          <p class="muted" style="color:var(--muted);margin:6px 0">Conversión a etanol.</p>
+        </div>
+        <div class="module">
+          <strong>Módulo 2 — ACC1 / FAS1-FAS2</strong>
+          <p style="color:var(--muted);margin:6px 0">Síntesis de ácidos grasos.</p>
+        </div>
+        <div class="module">
+          <strong>Módulo 3 — WS/DGAT</strong>
+          <p style="color:var(--muted);margin:6px 0">Producción de ésteres (biodiésel).</p>
+        </div>
+        <div class="module">
+          <strong>Módulo 4 — Transportadores HXT</strong>
+          <p style="color:var(--muted);margin:6px 0">Mejor captación de azúcares.</p>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top:14px">
+        <div class="card">
+          <h3>Diseño y ensamblaje</h3>
+          <p style="color:var(--muted)">Muestra las partes biológicas (promotores, CDS, terminadores) y el plásmido. Incluir imagen del organismo (<em>S. cerevisiae</em>) y describir sus características: GRAS, facilidad de transformación, herramientas de edición disponibles.</p>
+          <p style="color:var(--muted);font-size:13px">Comenta aquí sobre normas de bioseguridad y uso de cepas seguras.</p>
+        </div>
+
+        <aside class="card">
+          <h4 style="margin-top:0">Recursos</h4>
+          <ul style="color:var(--muted);padding-left:18px">
+            <li>Link Benchling — pega tu URL</li>
+            <li>Imágenes: foto del cultivo, gel, mapas</li>
+            <li>Documentos: protocolos y notas</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="resultados" class="card">
+      <h2>Resultados esperados</h2>
+      <ul style="color:var(--muted)">
+        <li>Mayor rendimiento de etanol por azúcar.</li>
+        <li>Tolerancia aumentada al etanol.</li>
+        <li>Producción de lípidos o biodiésel (ésteres).</li>
+        <li>Señales de reporter para validar expresión (p.ej. GFP, RFP).</li>
+      </ul>
+
+      <h3>Plan de escalado</h3>
+      <ol style="color:var(--muted)">
+        <li>Diseño y mapeo in silico.</li>
+        <li>Prototipo y ensayos en laboratorio.</li>
+        <li>Piloto: pequeña planta local con residuos.</li>
+      </ol>
+    </section>
+
+    <section id="etica" class="card">
+      <h2>Impacto ético y social</h2>
+      <p style="color:var(--muted)">Incluye discusión sobre biosafety (procesos en contención, cepas seguras), sustratos (usar residuos y no alimentos), participación comunitaria, sostenibilidad (análisis de ciclo de vida) y regulación (cumplimiento normativo).</p>
+
+      <div style="margin-top:12px">
+        <strong>Temas a cubrir:</strong>
+        <ul style="color:var(--muted)">
+          <li>Riesgos y mitigaciones.</li>
+          <li>Impacto social y económico local.</li>
+          <li>Transparencia con la comunidad y uso responsable.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="equipo" class="card">
+      <h2>Equipo Vacteria</h2>
+      <div class="team-grid">
+        <div class="member">
+          <strong>RM</strong>
+          <div style="color:var(--muted)">Rico Mendoza Daniel — Web</div>
+        </div>
+        <div class="member">
+          <strong>FR</strong>
+          <div style="color:var(--muted)">Fernandez Rosazza Gabriel Alejandro — Web</div>
+        </div>
+        <div class="member">
+          <strong>MG</strong>
+          <div style="color:var(--muted)">Michel Garcia Alejandro Ariel — Coordinador</div>
+        </div>
+        <div class="member">
+          <strong>JC</strong>
+          <div style="color:var(--muted)">Juarez Chuquimia Alintse Ivana</div>
+        </div>
+        <div class="member">
+          <strong>VC</strong>
+          <div style="color:var(--muted)">Villaroel Chalar Valeria Fernanda — Benchling</div>
+        </div>
+      </div>
+
+      <p style="color:var(--muted);margin-top:12px">Añade fotos del equipo y roles más detallados si las tienes. También se puede incluir una sección de agradecimientos, referencias bibliográficas y enlaces a protocolos.</p>
+    </section>
+
+  </main>
+  <footer>
+    <div class="card" style="display:inline-block;padding:12px;border-radius:10px;">© Equipo Vacteria — BactDetect • Proyecto iGEM 2025</div>
+  </footer>
+
+  <script>
+    // Pequeñas mejoras: reemplaza el href con el link real desde el DOM cuando lo tengas
+    document.getElementById('benchling-link').addEventListener('click', function(e){
+      e.preventDefault();
+      const url = prompt('Pega aquí el link de Benchling (URL completa)');
+      if(url) window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
